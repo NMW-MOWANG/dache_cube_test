@@ -1,0 +1,25 @@
+views:
+  - name: yongche_2c_view
+    cubes:
+      - join_path: yongche_2c
+        includes: "*"
+
+  - name: yongche_flow_view
+    cubes:
+      - join_path: yongche_flow
+        includes: "*"
+
+  - name: yongche_supply_view
+    cubes:
+      - join_path: yongche_supply
+        includes: "*"
+
+  - name: yongche_flow_retention_view
+    cubes:
+      - join_path: yongche_flow_retention
+        includes: "*"
+
+  - name: yongche_2c_yoy_view
+    cubes:
+      - join_path: yongche_2c_yoy
+        includes: "*"
