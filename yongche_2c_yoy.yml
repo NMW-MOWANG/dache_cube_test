@@ -1,0 +1,67 @@
+cubes:
+  - name: yongche_2c_yoy
+    sql_table: map_taxi_analytics.lbsmap_rpt_yongche_io_2c_di_yoy_ck
+    data_source: clickhouse
+
+    dimensions:
+      - name: event_day
+        sql: event_day
+        type: time
+      - name: biz_type
+        sql: biz_type
+        type: string
+      - name: user_level
+        sql: user_level
+        type: string
+      - name: start_city_name
+        sql: start_city_name
+        type: string
+      - name: start_city_id
+        sql: start_city_id
+        type: string
+      - name: src_chn1
+        sql: src_chn1
+        type: string
+      - name: src_chn2
+        sql: src_chn2
+        type: string
+      - name: select_car_type
+        sql: select_car_type
+        type: string
+      - name: is_city_diff
+        sql: is_city_diff
+        type: string
+      - name: natural_week_number
+        sql: natural_week_number
+        type: string
+      - name: business_week_number
+        sql: business_week_number
+        type: string
+
+    measures:
+      - name: count
+        type: count
+      - name: complete_order_cnt
+        sql: complete_order_cnt
+        type: sum
+      - name: actual_gmv
+        sql: actual_gmv
+        type: sum
+      - name: baidu_subsidy
+        sql: baidu_subsidy
+        type: sum
+      - name: profit
+        sql: profit
+        type: sum
+      - name: complete_order_cnt_b1y
+        sql: complete_order_cnt_b1y
+        type: sum
+      - name: actual_gmv_b1y
+        sql: actual_gmv_b1y
+        type: sum
+      - name: baidu_subsidy_b1y
+        sql: baidu_subsidy_b1y
+        type: sum
+      - name: profit_b1y
+        sql: profit_b1y
+        type: sum

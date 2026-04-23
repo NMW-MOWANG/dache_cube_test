@@ -1,0 +1,106 @@
+cubes:
+  - name: yongche_2c
+    sql_table: map_taxi_analytics.lbsmap_rpt_yongche_io_2c_di_ck
+    data_source: clickhouse
+
+    dimensions:
+      - name: event_day
+        sql: event_day
+        type: time
+      - name: biz_type
+        sql: biz_type
+        type: string
+      - name: user_level
+        sql: user_level
+        type: string
+      - name: start_city_id
+        sql: start_city_id
+        type: string
+      - name: start_city_name
+        sql: start_city_name
+        type: string
+      - name: src_chn1
+        sql: src_chn1
+        type: string
+      - name: src_chn2
+        sql: src_chn2
+        type: string
+      - name: distance_tag
+        sql: distance_tag
+        type: string
+      - name: hour
+        sql: hour
+        type: string
+      - name: start_tag
+        sql: start_tag
+        type: string
+      - name: end_tag
+        sql: end_tag
+        type: string
+      - name: is_single_selected
+        sql: is_single_selected
+        type: string
+      - name: partner_id
+        sql: partner_id
+        type: string
+      - name: device_from
+        sql: device_from
+        type: string
+      - name: is_city_diff
+        sql: is_city_diff
+        type: string
+      - name: select_car_type
+        sql: select_car_type
+        type: string
+      - name: app_name
+        sql: app_name
+        type: string
+      - name: is_first_order
+        sql: is_first_order
+        type: string
+      - name: natural_week_number
+        sql: natural_week_number
+        type: string
+      - name: business_week_number
+        sql: business_week_number
+        type: string
+
+    measures:
+      - name: count
+        type: count
+      - name: complete_order_cnt
+        sql: complete_order_cnt
+        type: sum
+      - name: actual_gmv
+        sql: actual_gmv
+        type: sum
+      - name: original_gmv
+        sql: original_gmv
+        type: sum
+      - name: baidu_subsidy
+        sql: baidu_subsidy
+        type: sum
+      - name: profit
+        sql: profit
+        type: sum
+      - name: commission
+        sql: commission
+        type: sum
+      - name: cancel_cnt
+        sql: cancel_cnt
+        type: sum
+      - name: answer_order_cnt
+        sql: answer_order_cnt
+        type: sum
+      - name: call_order_cnt
+        sql: call_order_cnt
+        type: sum
+      - name: complete_uid_cnt
+        sql: complete_uid_cnt
+        type: sum
+      - name: dache_dau
+        sql: dache_dau
+        type: sum
+      - name: maopao_uv
+        sql: maopao_uv
+        type: sum

@@ -1,0 +1,49 @@
+cubes:
+  - name: yongche_flow_retention
+    sql_table: map_taxi_analytics.lbsmap_rpt_yongche_io_flow_retention_di_ck
+    data_source: clickhouse
+
+    dimensions:
+      - name: event_day
+        sql: event_day
+        type: time
+      - name: base_day
+        sql: base_day
+        type: string
+      - name: cur_day
+        sql: cur_day
+        type: string
+      - name: biz_type
+        sql: biz_type
+        type: string
+      - name: start_city_name
+        sql: start_city_name
+        type: string
+      - name: start_city_id
+        sql: start_city_id
+        type: string
+      - name: user_level
+        sql: user_level
+        type: string
+      - name: src_chn1
+        sql: src_chn1
+        type: string
+      - name: select_car_type
+        sql: select_car_type
+        type: string
+
+    measures:
+      - name: count
+        type: count
+      - name: complete_uid_cnt
+        sql: complete_uid_cnt
+        type: sum
+      - name: complete_stay_uid_cnt
+        sql: complete_stay_uid_cnt
+        type: sum
+      - name: call_stay_uid_cnt
+        sql: call_stay_uid_cnt
+        type: sum
+      - name: complete_cuid_cnt
+        sql: complete_cuid_cnt
+        type: sum

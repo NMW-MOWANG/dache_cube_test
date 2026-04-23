@@ -1,0 +1,52 @@
+cubes:
+  - name: yongche_supply
+    sql_table: map_taxi_analytics.lbsmap_rpt_yongche_io_supply_di_ck
+    data_source: clickhouse
+
+    dimensions:
+      - name: event_day
+        sql: event_day
+        type: time
+      - name: biz_type
+        sql: biz_type
+        type: string
+      - name: partner_id
+        sql: partner_id
+        type: string
+      - name: select_car_type
+        sql: select_car_type
+        type: string
+      - name: start_city_name
+        sql: start_city_name
+        type: string
+      - name: start_city_id
+        sql: start_city_id
+        type: string
+      - name: is_city_diff
+        sql: is_city_diff
+        type: string
+      - name: natural_week_number
+        sql: natural_week_number
+        type: string
+
+    measures:
+      - name: count
+        type: count
+      - name: hand_up_driver_cnt
+        sql: hand_up_driver_cnt
+        type: sum
+      - name: answer_driver_cnt
+        sql: answer_driver_cnt
+        type: sum
+      - name: complete_driver_cnt
+        sql: complete_driver_cnt
+        type: sum
+      - name: active_driver_cnt
+        sql: active_driver_cnt
+        type: sum
+      - name: call_order_cnt
+        sql: call_order_cnt
+        type: sum
+      - name: qilin_complete_order_cnt
+        sql: qilin_complete_order_cnt
+        type: sum
